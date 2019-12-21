@@ -1,0 +1,19 @@
+/*
+#f5f5f5
+#30e3ca
+#2f89fc
+#40514e
+*/
+.background {
+    -fx-background-color: /*#30e3ca*/#2f89fc;
+    -fx-opacity: 0.8;
+    -fx-background-radius: 4%;
+}
+.field{
+    -fx-background-color: #f5f5f5;
+}
+
+.button{
+    -fx-background-color: #30e3ca;
+}
+
