@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ir.shayandaneshvar.presenter.ClientController"
-            prefHeight="400.0" prefWidth="600.0">
+<?import javafx.scene.text.Font?>
 
+<AnchorPane fx:id="root" prefHeight="338.0" prefWidth="520.0" styleClass="background" stylesheets="@../../../../resources/css/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.shayandaneshvar.presenter.ClientController">
+   <children>
+      <ScrollPane layoutX="10.0" layoutY="14.0" prefHeight="250.0" prefWidth="500.0">
+         <content>
+            <JFXTextArea fx:id="showArea" editable="false" prefHeight="248.0" prefWidth="498.0" promptText="connecting...." wrapText="true">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </JFXTextArea>
+         </content>
+      </ScrollPane>
+      <JFXButton fx:id="sendButton" layoutX="426.0" layoutY="277.0" onMouseClicked="#handleSend" prefHeight="44.0" prefWidth="84.0" stylesheets="@../../../../resources/css/styles.css" text="Send" />
+      <JFXButton fx:id="exitButton" layoutX="348.0" layoutY="277.0" onMouseClicked="#exit" prefHeight="44.0" prefWidth="67.0" style="-fx-background-color: pink;" stylesheets="@../../../../resources/css/styles.css" text="Exit" />
+      <ScrollPane layoutX="10.0" layoutY="277.0" prefHeight="50.0" prefWidth="326.0">
+         <content>
+            <JFXTextArea fx:id="typingField" onKeyPressed="#handleKeyPressed" prefHeight="29.0" prefWidth="306.0" promptText="Type something..." wrapText="true">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </JFXTextArea>
+         </content>
+      </ScrollPane>
+   </children>
 </AnchorPane>

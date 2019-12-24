@@ -3,6 +3,8 @@ package ir.shayandaneshvar.presenter;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import ir.shayandaneshvar.model.Client;
+import ir.shayandaneshvar.services.ClientNetwork;
+import ir.shayandaneshvar.services.ClientUDPNetwork;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
@@ -43,7 +45,8 @@ public class LoginController implements Initializable {
     void tryConnect(MouseEvent event) {
         // TODO: 12/21/2019
         // FIXME: 12/22/2019
-        Client client = new Client(name.getText(), ip.getText(),
+        Client client = new Client(name.getText());
+        ClientNetwork network = new ClientUDPNetwork(ip.getText(),
                 Integer.parseInt(port.getText()));
 
     }
